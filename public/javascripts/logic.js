@@ -58,3 +58,39 @@ function highlightActiveLink() {
     }
   });
 }
+
+// document.querySelector("form.contact-form").addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const formData = new FormData(e.target);
+//   fetch("/send-email", {
+//     method: "POST",
+//     body: formData,
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.errors) {
+//         displayMessage(message, errors);
+//       } else {
+//         displayMessage(message);
+//       }
+//     });
+// });
+
+// function displayMessage(message, errors) {
+//   const form = document.getElementById("form-messages");
+//   const ul = document.querySelector("form.contact-form ul.err");
+//   if (!errors) {
+//     form.innerText = message;
+//     form.reset();
+//     ul.innerHTML = "";
+//   } else {
+//     form.innerText = message;
+//     ul.innerHTML = "";
+//     errors.forEach((err) => {
+//       let li = document.createElement("li");
+//       li.innerText = err;
+//       ul.append(li);
+//     });
+//   }
+// }

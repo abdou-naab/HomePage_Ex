@@ -5,9 +5,11 @@ html(lan="en")
     meta( name="viewport" content="width=device-width, initial-scale=1.0") 
     title Naab HomePage
     link( rel="stylesheet" href="/stylesheets/style.css")
-
+    if scriptNeeded
+      script(type="text/javascript" src="../javascripts/logic.js" defer)
   body
     .main
       block content
-      script 
-        include ../logic.js
+    
+    //- script 
+    //-   include ../logic.js

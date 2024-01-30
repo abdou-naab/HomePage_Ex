@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 :root {
   --c0: #2b3a55;
   --c1: #ce7777;
@@ -49,6 +52,7 @@ body {
   padding: 0 var(--hPad);
   margin: 0;
   border: none;
+  min-width: 65%;
 }
 header {
   width: 50%;
@@ -78,7 +82,7 @@ header h5 {
   width: 50ch;
 }
 header p {
-  width: 50ch;
+  width: 38ch;
   margin-top: 16px;
   margin-bottom: 0px;
   font-weight: 300;
@@ -256,21 +260,87 @@ section#contact {
   text-align: center;
   gap: 1.6rem;
 }
+.download-form {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.download-form input {
+  font-size: 1rem;
+  color: var(--c2);
+  background-color: unset;
+  border: 1px solid var(--c3);
+  border-radius: 6px;
+  outline: none;
+  padding: 0.4em;
+  padding-bottom: 0.5em;
+}
+.download-form input::placeholder {
+  color: var(--c2);
+}
+.download-form label {
+  cursor: pointer;
+}
+.download-form div {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.contact-form {
+  flex-shrink: 0;
+  height: max-content;
+}
+.contact-form .err,
+.download-form .err {
+  list-style: disc;
+  color: var(--c1);
+  align-self: flex-start;
+  text-align: left;
+  padding-left: 2rem;
+}
+.contact-form p {
+  margin-bottom: 1.2rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--c2);
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  color: var(--c2);
 
-#email {
+  width: 100%;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-bottom: 2px solid var(--c2);
+  outline: none;
+
+  background-color: unset;
+  padding: 0.1em;
+  padding-bottom: 0.5em;
+}
+#send_mail {
+  font-weight: bold;
+
+  background-color: unset;
+  cursor: pointer;
   outline: none;
   color: var(--c2);
   border: 2px solid var(--c2);
   font-size: 1.1rem;
   padding: 0.7em 1.7rem;
+  margin-top: 1.2rem;
   border-radius: 6px;
 }
-#email:hover {
+#send_mail:hover {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px 0px var(--c2);
 }
 
-#email:active {
+#send_mail:active {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px var(--c2);
 }
@@ -311,6 +381,7 @@ section#contact {
   }
   body {
     display: block;
+    min-height: 100dvh;
   }
   .content section {
     width: 85%;
@@ -332,6 +403,9 @@ section#contact {
     --project-width: 210px;
     --hPad: 12px;
     --vPad: 3rem;
+  }
+  .download-form {
+    padding-top: 0;
   }
   .project {
     aspect-ratio: 9/16;
