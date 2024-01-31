@@ -148,7 +148,7 @@ header nav a {
   box-sizing: border-box;
   justify-content: flex-end;
   flex-direction: column;
-  padding-left: var(--main-gap);
+  padding: 2px 2px 2px 6px;
   position: absolute;
   top: 0;
   left: 0;
@@ -204,6 +204,7 @@ section#about a:hover svg {
 }
 .project p {
   margin: 0 0 1rem 0;
+  font-size: 14px;
 }
 .project .technologies {
   margin: 0;
