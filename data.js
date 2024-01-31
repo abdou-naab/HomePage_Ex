@@ -51,6 +51,19 @@ exports.projects = [
     img: "/images/cvBuilder.jpg",
   },
   {
+    name: "Weather App",
+    slug: "weather_app",
+    url: "https://abdou-naab.github.io/weather-app/",
+    description: `User-friendly weather forecast for 3 days. Users can retrieve
+    real-time weather data. The website enhances the user experience
+    by visually representing the weather conditions through
+    appropriate icons and search suggestions.`,
+
+    tech: ["html", "css", "js", "weather api"],
+    img_ph: "/images/weather-app_ph.jpg",
+    img: "/images/weather-app.jpg",
+  },
+  {
     name: "Todo App",
     slug: "todo_app",
     url: "https://abdou-naab.github.io/todo",
@@ -59,9 +72,9 @@ exports.projects = [
     folders, and a responsive design. All data is saved to local
     storage for convenience and accessibility. 
     they had to get us throw this with vanilla js before react *I'm fine :)*`,
-    tech: ["html", "css", "js", "weather api"],
-    img_ph: "/images/weather-app_ph.jpg",
-    img: "/images/weather-app.jpg",
+    tech: ["html", "css", "js"],
+    img_ph: "/images/todo-app_ph.jpg",
+    img: "/images/todo-app.jpg",
   },
   {
     name: "Battleship",
