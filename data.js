@@ -64,6 +64,17 @@ exports.projects = [
     img: "/images/weather-app.jpg",
   },
   {
+    name: "Battleship",
+    slug: "battleship",
+    url: "https://abdou-naab.github.io/battleship",
+    description: `  An engaging "Battleship" game where you compete against an
+    intelligent AI with a test driven development. The game is
+    designed to provide a challenging and fun experience`,
+    tech: ["html", "css", "js", "Webpack", "jest"],
+    img_ph: "/images/battleship_ph.jpg",
+    img: "/images/battleship.jpg",
+  },
+  {
     name: "Todo App",
     slug: "todo_app",
     url: "https://abdou-naab.github.io/todo",
@@ -76,17 +87,7 @@ exports.projects = [
     img_ph: "/images/todo-app_ph.jpg",
     img: "/images/todo-app.jpg",
   },
-  {
-    name: "Battleship",
-    slug: "battleship",
-    url: "https://abdou-naab.github.io/battleship",
-    description: `  An engaging "Battleship" game where you compete against an
-    intelligent AI with a test driven development. The game is
-    designed to provide a challenging and fun experience`,
-    tech: ["html", "css", "js", "Webpack", "jest"],
-    img_ph: "/images/battleship_ph.jpg",
-    img: "/images/battleship.jpg",
-  },
+
   {
     name: "Restaurant Page",
     slug: "restaurant",
