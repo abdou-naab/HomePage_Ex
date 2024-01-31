@@ -50,7 +50,7 @@ function sendEmail(res, name, email, subject, message) {
   });
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL,
+    to: process.env.DIST_EMAIL,
     subject: name + " - email: " + email,
     text: subject + " \n" + message,
   };
