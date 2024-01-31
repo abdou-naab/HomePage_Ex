@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  include header.pug
+  article.content
+    include about.pug
+    section#projects
+      div.title
+      each project in projects
+        div.project(name= project.slug) 
+          img(data-imgdesktop=project.img, data-imgmobile= project.img_ph, alt= project.slug)
+          div.description
+            a( href=project.url target="_blank")
+              h4 #{project.name} 
+                include arrow-svg.pug
+            p #{project.description}
+
+            div.technologies
+              each t in project.tech
+                span #{t}  
+
+    include contact.pug
+  
