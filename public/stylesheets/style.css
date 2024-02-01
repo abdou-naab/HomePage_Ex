@@ -208,10 +208,11 @@ section#about a:hover svg {
 }
 .project .technologies {
   margin: 0;
-  padding: 0 0 1rem 0;
+  padding: 0 0 0.27rem 0;
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  flex-shrink: 0;
 }
 .project .technologies span {
   border: none;
