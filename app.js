@@ -10,19 +10,12 @@ const compression = require("compression");
 const helmet = require("helmet");
 const RateLimit = require("express-rate-limit");
 
-
 const indexRouter = require("./routes/index");
 const sendEmailRouter = require("./routes/sendEmail");
 const cvRouter = require("./routes/cv");
 const app = express();
 app.use(compression());
 app.use(helmet());
-const limiter = RateLimit({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 20,
-});
-app.use(limiter);
-
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -36,6 +29,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20,
+});
+const excludeFromRateLimit = (req, res, next) => {
+  const excludedPaths = ["/images", "/javascripts"];
+  const isExcluded = excludedPaths.some((path) => req.url.startsWith(path));
+  if (isExcluded) {
+    next();
+  } else {
+    limiter(req, res, next);
+  }
+};
+app.use(excludeFromRateLimit);
 
 app.use("/", indexRouter);
 app.use("/send-email", sendEmailRouter);
