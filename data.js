@@ -1,5 +1,20 @@
 exports.projects = [
   {
+    name: "Themes & Memes",
+    slug: "themes_and_memes",
+    url: "https://themesandmemes.onrender.com/",
+    description: `Vibrant community space for discussions and meme sharing.
+     Ensuring a secure and engaging environment. Enhanced message display and deletion options streamline user interactions,
+      while additional functionalities such as meme posting, avatar selection, 
+      and secure password storage enrich the user experience.
+       Themes and Memes combines technical sophistication
+        with user-friendly features to create an immersive online
+         community platform.`,
+    tech: ["express js", "css", "passport", "mongo db"],
+    img_ph: "/images/t&m_ph.jpg",
+    img: "/images/t&m.jpg",
+  },
+  {
     name: "MGL Shopping Cart",
     slug: "mgl_shop",
     url: "https://mgl-shopping.vercel.app/",
@@ -13,18 +28,7 @@ exports.projects = [
     img_ph: "/images/shop_ph.jpg",
     img: "/images/shop.jpg",
   },
-  {
-    name: "Basic Inventory App",
-    slug: "inventory",
-    url: "https://basic-inventory-app-production.up.railway.app/",
-    description: `Inventory management app following the MVC approach, and MongoDb as a database 
-    used to store the items and categories. The app enable you to do basic CRUD operation throw 
-    express routing system, and many security measures applied with express middlewares like helmet and 
-    express-validator. This app comes with minimal styling as a schema for future projects or improvements.`,
-    tech: ["express", "mongodb", "pug", "css"],
-    img_ph: "/images/inventory_ph.jpg",
-    img: "/images/inventory.jpg",
-  },
+
   {
     name: "Remember The Heros",
     slug: "heros_memo_cards",
@@ -62,6 +66,18 @@ exports.projects = [
     tech: ["html", "css", "js", "weather api"],
     img_ph: "/images/weather-app_ph.jpg",
     img: "/images/weather-app.jpg",
+  },
+  {
+    name: "Basic Inventory App",
+    slug: "inventory",
+    url: "https://basic-inventory-app-production.up.railway.app/",
+    description: `Inventory management app following the MVC approach, and MongoDb as a database 
+    used to store the items and categories. The app enable you to do basic CRUD operation throw 
+    express routing system, and many security measures applied with express middlewares like helmet and 
+    express-validator. This app comes with minimal styling as a schema for future projects or improvements.`,
+    tech: ["express", "mongodb", "pug", "css"],
+    img_ph: "/images/inventory_ph.jpg",
+    img: "/images/inventory.jpg",
   },
   {
     name: "Battleship",
