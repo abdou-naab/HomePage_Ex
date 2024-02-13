@@ -13,7 +13,8 @@ block content
             a( href=project.url target="_blank")
               h4 #{project.name} 
                 include arrow-svg.pug
-            p #{project.description}
+            a( href=project.url target="_blank")
+              p #{project.description}
 
             div.technologies
               each t in project.tech
