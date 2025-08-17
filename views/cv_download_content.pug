@@ -1,0 +1,14 @@
+article.content
+    form.download-form(method="POST")
+        input(type="password",  name='pass' ,placeholder="password")
+        div
+            input(type="radio", id="en", name="lang", checked, value="en")
+            label(for="en") English
+        div
+            input(type="radio", id="fr", name="lang", value="fr")
+            label(for="fr") French
+        if errors
+            ul.err
+                for error in errors
+                    li!= error.msg 
+        button#send_mail(type="submit") Download cv
